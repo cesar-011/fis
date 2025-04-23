@@ -9,8 +9,8 @@ int main() {
   ht.CreateDataBase(file);
   Uid uid(8798);
   Usuario usuario("Cesar", "contraseña", uid);
-  IniciarSesion iniciar;
-  if (iniciar.ValidarCuenta(ht, usuario)) {
+  IniciarSesion iniciar(usuario);
+  if (iniciar.ValidarCuenta(ht)) {
     std::cout<<"Encontrado"<<'\n';
   }
 
