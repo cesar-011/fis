@@ -11,11 +11,12 @@
 
 class IniciarSesion {
  public:
-  bool ValidarCuenta(HashTable<Uid>&, const Usuario&);
+  IniciarSesion(const Usuario user) : user_(user){}
+  bool ValidarCuenta(HashTable<Uid>&);
   
 
  private:
-  Usuario user;
+  Usuario user_;
 
 };
 
