@@ -8,6 +8,7 @@ class Uid {
  public:
   Uid (const int uid) : uid_(uid) {}
   Uid (const Uid&);
+  Uid () = default;
   int get_uid() const {return uid_;}
   operator int() {return this->uid_;}
   bool operator ==(const Uid&) const;

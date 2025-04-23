@@ -11,6 +11,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <vector>
 
 
 
@@ -22,9 +23,11 @@ public:
   virtual bool search(const Key& k) override;
   virtual bool insert(const Key& k) override;
   virtual void Print() const override;
+  const std::vector<Usuario> get_users() const {return users_;}
 
 private:
   DynamicSquence<Key>* table_;  //Puntero que apunta a las diferentes posiciones de la tabla
+  std::vector<Usuario> users_;
   int table_size_;  //Tamaño de la tabla
   DispersionFunction<Key>& fd_; //Funcion de dispersion
 };
@@ -48,11 +51,16 @@ void HashTable<Key, Container>::CreateDataBase(std::ifstream& file) {
   std::string line;
   while (std::getline(file, line)) {
     std::stringstream stream(line);
-    std::string dummy, uid_str;
-    std::getline(stream, dummy, ':');
-    std::getline(stream, dummy, ':');
+    std::string nombre, constraseña, uid_str;
+    std::getline(stream, nombre, ':');
+    
+    std::getline(stream, constraseña, ':');
+    
     std::getline(stream, uid_str);
     int uids = std::stoi(uid_str);
+
+    Usuario user (nombre, constraseña, uids);
+    users_.push_back(user);
 
     Uid uid(uids);
     this->insert(uid);
