@@ -2,7 +2,7 @@
 #include <iostream>
 #include <filesystem>
 
-Proyecto GestorDeProyectos::crearProyecto(const Usuario& usuario) {
+Proyecto GestorDeProyectos::crearProyecto(const Usuario2& usuario) {
   std::string nombre, descripcion;
   std::cout << "Nombre del proyecto: ";
   std::getline(std::cin, nombre);

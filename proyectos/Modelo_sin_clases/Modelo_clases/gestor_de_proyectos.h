@@ -8,7 +8,7 @@
 
 class GestorDeProyectos {
 public:
-  static Proyecto crearProyecto(const Usuario& usuario);
+  static Proyecto crearProyecto(const Usuario2& usuario);
   static void abrirProyectoExistente();
 };
 

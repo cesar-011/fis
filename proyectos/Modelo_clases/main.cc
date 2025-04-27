@@ -14,7 +14,7 @@ int main() {
     std::string uid;
     std::cout << "Tu UID: ";
     std::getline(std::cin, uid);
-    Usuario usuario(uid);
+    Usuario2 usuario(uid);
     Proyecto proyecto = GestorDeProyectos::crearProyecto(usuario);
     proyecto.abrirMenuInteractivo(uid);
   } else if (opcion == "2") {

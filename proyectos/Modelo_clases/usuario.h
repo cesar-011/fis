@@ -3,9 +3,9 @@
 
 #include <string>
 
-class Usuario {
+class Usuario2 {
  public:
-  Usuario(const std::string& uid);
+  Usuario2(const std::string& uid);
   std::string getUID() const;
 
  private:

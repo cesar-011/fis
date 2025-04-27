@@ -1,7 +1,7 @@
 #include "usuario.h"
 
-Usuario::Usuario(const std::string& uid) : uid_(uid) {}
+Usuario2::Usuario2(const std::string& uid) : uid_(uid) {}
 
-std::string Usuario::getUID() const {
+std::string Usuario2::getUID() const {
   return uid_;
 }

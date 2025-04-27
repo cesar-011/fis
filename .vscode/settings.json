@@ -51,6 +51,9 @@
     "variant": "cpp",
     "text_encoding": "cpp",
     "iostream": "cpp",
-    "sstream": "cpp"
+    "sstream": "cpp",
+    "codecvt": "cpp",
+    "ratio": "cpp",
+    "iomanip": "cpp"
   }
 }
