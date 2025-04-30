@@ -1,7 +1,7 @@
 #ifndef USUARIO_H_
 #define USUARIO_H_
 
-#include "Uid.h"  // Si prefieres mantener una clase Uid externa
+#include "Uid.h"
 #include <string>
 
 class Usuario {
