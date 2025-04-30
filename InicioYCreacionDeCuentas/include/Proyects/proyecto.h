@@ -28,6 +28,7 @@ class Proyecto {
   void anadirTarea();
   void completarTarea();
   void mostrarTareas() const;
+  bool tieneAcceso(const std::string& usuarioUID) const;
   
   std::string getRuta() const;
   std::string getNombre() const;

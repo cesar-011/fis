@@ -2,7 +2,7 @@
 #define UID_H_
 
 #include <iostream>
-
+#include <string>
 
 class Uid {
  public:
@@ -20,6 +20,8 @@ class Uid {
   Uid& operator =(const Uid&);
   Uid& operator +=(const Uid&);
   friend std::ostream& operator <<(std::ostream& os, const Uid& uid);
+  std::string to_string() const;
+  Uid(const std::string& str_uid) : uid_(std::stoi(str_uid)) {}
 
  private:
   int uid_;

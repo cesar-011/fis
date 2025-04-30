@@ -281,3 +281,21 @@ void Proyecto::mostrarTareas() const {
     std::cout << "No hay tareas en el archivo" << std::endl;
   }
 }
+
+
+bool Proyecto::tieneAcceso(const std::string& usuarioUID) const {
+  // El creador tiene acceso
+  if (usuarioUID == creador_uid_) {
+    return true;
+  }
+  
+  // Los miembros tambien tienen acceso
+  for (const auto& miembro : miembros_) {
+    if (miembro == usuarioUID) {
+      return true;
+    }
+  }
+
+  // Si no es el creador ni un miembro, no tiene acceso
+  return false;
+}

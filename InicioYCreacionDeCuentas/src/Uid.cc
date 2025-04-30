@@ -41,3 +41,7 @@ std::ostream& operator<<(std::ostream& os, const Uid& uid) {
   os << uid.get_uid();
   return os;
 }
+
+std::string Uid::to_string() const {
+  return std::to_string(uid_);
+}

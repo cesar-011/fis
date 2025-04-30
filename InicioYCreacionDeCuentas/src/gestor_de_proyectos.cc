@@ -2,7 +2,7 @@
 #include <iostream>
 #include <filesystem>
 
-Proyecto GestorDeProyectos::crearProyecto(const Usuario2& usuario) {
+Proyecto GestorDeProyectos::crearProyecto(const Usuario& usuario) {
   std::string nombre, descripcion;
   std::cout << "Nombre del proyecto: ";
   std::getline(std::cin, nombre);
@@ -67,5 +67,12 @@ void GestorDeProyectos::abrirProyectoExistente() {
   std::getline(std::cin, uid);
 
   Proyecto proyecto(proyectos[seleccion - 1]);
+
+  // Verificamos si el usuario tiene acceso
+  if (!proyecto.tieneAcceso(uid)) {
+    std::cout << "No tienes acceso a este proyecto" << std::endl;
+    return;
+  }
+
   proyecto.abrirMenuInteractivo(uid);
 }

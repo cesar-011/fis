@@ -7,6 +7,11 @@ void CrearCuenta::AñadirCuenta(HashTable<Uid>& base_datos) {
     std::cerr<<"La cuenta que estás intentando crear ya está creada"<<'\n';
     //Si no existe, añadir el usuario a la base de datos de usuarios
   } else {
+    // Nos movemos al final del archivo para comprobar si hay contenido
+    base_datos_.seekp(0, std::ios::end);
+    if (base_datos_.tellp() != 0) {
+      base_datos_ << '\n';  // Añadir salto si no está vacío
+    }
     this->base_datos_ << this->user_.get_name() <<":"<<this->user_.get_password()<<":"<<this->user_.get_uid();
   }
 
