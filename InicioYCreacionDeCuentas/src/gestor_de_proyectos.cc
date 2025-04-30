@@ -1,4 +1,4 @@
-#include "gestor_de_proyectos.h"
+#include "../include/Proyects/gestor_de_proyectos.h"
 #include <iostream>
 #include <filesystem>
 

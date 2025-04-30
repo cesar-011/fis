@@ -3,6 +3,8 @@
 
 #include <string>
 #include <vector>
+#include <sstream>
+#include "tarea.h"
 
 class Proyecto {
  public:
@@ -23,6 +25,9 @@ class Proyecto {
   void borrarArchivo(const std::string& usuarioUID);
   void renombrarArchivo(const std::string& usuarioUID);
   void verHistorial() const;
+  void anadirTarea();
+  void completarTarea();
+  void mostrarTareas() const;
   
   std::string getRuta() const;
   std::string getNombre() const;

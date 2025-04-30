@@ -1,7 +1,7 @@
 #ifndef GESTOR_DE_PROYECTOS_H
 #define GESTOR_DE_PROYECTOS_H
 
-#include "usuario.h"
+#include "../User/usuario2.h"
 #include "proyecto.h"
 #include <vector>
 #include <string>

@@ -1,7 +1,11 @@
 #include "../include/Login/IniciarSesion.h"
 #include "../include/HashTable/DispersionFunction/SumBased.h"
-#include "../../proyectos/Modelo_sin_clases/Modelo_clases/usuario.h"
-#include "../../proyectos/Modelo_sin_clases/Modelo_clases/gestor_de_proyectos.h"
+#include "../include/User/usuario2.h"
+#include "../include/Proyects/gestor_de_proyectos.h"
+#include "../include/Proyects/proyecto.h"
+#include "../include/Proyects/tarea.h"
+
+
 
 int main() {
   SumBased<Uid> df(6);
@@ -38,3 +42,4 @@ int main() {
 
   return 0;
 }
+
