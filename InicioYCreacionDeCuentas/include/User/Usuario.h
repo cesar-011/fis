@@ -10,7 +10,7 @@ class Usuario {
   Usuario(const std::string& name, const std::string& password, const Uid& uid)
     : name_(name), password_(password), uid_(uid) {}
 
-  // Constructor solo con string para uid (como en Usuario2)
+  // Constructor solo con string para uid
   Usuario(const std::string& uid_str)
     : uid_(uid_str) {}
 
@@ -20,7 +20,7 @@ class Usuario {
   const Uid& get_uid() const { return uid_; }
   const std::string& get_name() const { return name_; }
   const std::string& get_password() const { return password_; }
-  std::string getUID() const { return uid_.to_string(); }  // Suponiendo que Uid tiene to_string()
+  std::string getUID() const { return uid_.to_string(); } 
 
   // Setters
   void set_name(const std::string& name) { name_ = name; }

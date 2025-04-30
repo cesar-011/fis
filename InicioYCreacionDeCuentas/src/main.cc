@@ -124,7 +124,6 @@ int main() {
     std::cout << "Tu UID: ";
     std::getline(std::cin, uid);
     Usuario usuario2(uid);
-    //Corregir la clase usuario para solo trabajar con una
     Proyecto proyecto = GestorDeProyectos::crearProyecto(usuario2);
     proyecto.abrirMenuInteractivo(uid);
   } else if (opcion2 == "2") {
